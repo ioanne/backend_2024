@@ -5,7 +5,7 @@
 python -m venv env
 ```
 
-## 2. Activar Entorno Virtual
+## 2. Activar entorno virtual
 Activa el entorno virtual:
 
 
