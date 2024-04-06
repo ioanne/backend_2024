@@ -8,6 +8,7 @@ class Author(models.Model):
     email = models.EmailField()
     nacimiento = models.DateField()
     altura = models.IntegerField()
+    ciudad = models.CharField(max_length=80)
 
     def __str__(self):
         return f'name: {self.name} pais: {self.pais}, email: {self.email}'
