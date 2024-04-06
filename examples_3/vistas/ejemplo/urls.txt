@@ -1,0 +1,26 @@
+
+# URLS
+# dominio/URL
+URL = '/recurso1/recurso1.2/recurso1.2.1/{4}/'
+
+alumno1 = 'Juan Perez'
+carrera1 = 'TSDS'
+carrera2 = 'TSAS'
+
+materia1 = 'Programación'
+
+# Datos pasados por URL
+URL = '/alumno/{1}/carrera/{2}/materia/{1}/'
+
+
+
+URL = 'alumno/{1}/search/carrera?nombre=TSAS'
+
+URL = 'alumno/{1}/carrera/{2}/materia?nombre=Programación'
+
+
+# Seguridad.
+# El ID del alumno debe salir del inicio de sesión
+
+# Autorización y autenticación
+URL = 'alumno/carrera/{2}/materia?nombre=Programación'
