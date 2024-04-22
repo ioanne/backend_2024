@@ -1,0 +1,12 @@
+{% block title %} {{ title }} {% endblock %} {% block content %}
+<h1>Bienvenido al Instituto</h1>
+{% for alumno in alumnos %}
+<div>
+    <p>Alumno: {{alumno.nombre}}</p>
+    <p>Alumno: {{alumno.apellido}}</p>
+    <p>Carrera: {{alumno.carrera}}</p>
+    <p>Edad: {{alumno.dni}}</p>
+    <p>Edad: {{alumno.fecha_nacimiento}}</p>
+</div>
+
+{% endfor %} {% endblock %}
