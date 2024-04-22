@@ -5,13 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Django",
+            "name": "Python Debugger: Django - clase 3",
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/examples_3/vistas/manage.py",
-            "args": [
-                "runserver"
-            ],
+            "args": ["runserver"],
+            "django": true,
+            "autoStartBrowser": false
+        },
+        {
+            "name": "Python Debugger: Django - clase 6",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/clase_6/instituto/manage.py",
+            "args": ["runserver"],
             "django": true,
             "autoStartBrowser": false
         }
