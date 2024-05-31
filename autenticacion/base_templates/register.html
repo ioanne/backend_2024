@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Institución - Registro</title>
+        <!-- Favicon icon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}" />
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    </head>
+
+    <body class="h-100">
+        <div class="authincation h-100">
+            <div class="container-fluid h-100">
+                <div class="row justify-content-center h-100 align-items-center">
+                    <div class="col-md-6">
+                        <div class="authincation-content">
+                            <div class="row no-gutters">
+                                <div class="col-xl-12">
+                                    <div class="auth-form">
+                                        <h4 class="text-center mb-4">Registro</h4>
+                                        <form method="post">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="id_username"><strong>Usuario</strong></label>
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="id_username"
+                                                    name="username"
+                                                    placeholder="Usuario"
+                                                />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="id_email"><strong>Email</strong></label>
+                                                <input
+                                                    type="email"
+                                                    class="form-control"
+                                                    id="id_email"
+                                                    name="email"
+                                                    placeholder="email@example.com"
+                                                />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="id_password1"><strong>Contraseña</strong></label>
+                                                <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    id="id_password1"
+                                                    name="password1"
+                                                    placeholder="Contraseña"
+                                                />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="id_password2"><strong>Confirmar Contraseña</strong></label>
+                                                <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    id="id_password2"
+                                                    name="password2"
+                                                    placeholder="Contraseña"
+                                                />
+                                            </div>
+                                            <div class="text-center mt-4">
+                                                <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                                            </div>
+                                        </form>
+                                        <div class="new-account mt-3">
+                                            <p>¿Ya te registraste? <a class="text-primary" href="{% url 'login' %}">Inicia sesión</a></p>
+                                        </div>
+                                        {% for message in messages %}
+                                        <div class="form-group mt-3">
+                                            <p class="error-message text-danger">{{ message }}</p>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--**********************************
+    Scripts
+***********************************-->
+        <!-- Required vendors -->
+        <script src="{% static 'vendor/global/global.min.js' %}"></script>
+        <script src="{% static 'js/quixnav-init.js' %}"></script>
+        <!--endRemoveIf(production)-->
+    </body>
+</html>
