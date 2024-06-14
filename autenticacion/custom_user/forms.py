@@ -5,6 +5,12 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 class RegistrationForm(UserCreationForm):
+    """
+    Esta clase hereda de UserCreationForm
+    UserCreationForm contiene usernamme, password1 y password2
+    Se le agrega email
+
+    """
     email = forms.EmailField(
         max_length=254,
         help_text="Required. Inform a valid email address.",
