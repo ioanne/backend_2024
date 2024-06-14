@@ -6,6 +6,6 @@
         <title>Profile</title>
     </head>
     <body>
-        {{ user.profile.bio }}
+        {% if user.is_authenticated %} Logueado {% endif %} {{ user.profile.bio }}
     </body>
 </html>

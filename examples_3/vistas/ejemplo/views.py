@@ -23,5 +23,7 @@ class Vista(TemplateView):
 
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
+        # Obtenemos algo a la base de datos por ID
+        # Automaticamente tira un 404 si no existe
         context['nombre'] = self.request.GET.get('nombre')
         return context
